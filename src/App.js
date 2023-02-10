@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import Profile from './component/Profile';
+import "./App.css"
+export default  function App () {
+  function handleName(name) {
+    alert(name +"☺");
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div
+  
+   style={{
+    display: "flex",
+    justifyContent: "center",
+    position: "relative"
+  
+  }}
+  >
+   <Profile 
+   name="Marwen Barhoumi"
+    adress="Tozeur"
+     Image="" 
+     Profession="Full Stack JS" 
+     handleName={handleName}>
+     </Profile>
+   </div>
   );
 }
-
-export default App;
